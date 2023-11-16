@@ -1,0 +1,42 @@
+/* Allocate a single column when the width of the page is small. */
+.post-entry {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px 0px;
+}
+
+/* Allocate two columns when there is enough width. *
+ * The thumbnail is placed in the second column, while the rest of
+ * the children are placed in the first column. */
+@media (min-width: 700px) {
+    .post-entry {
+        grid-template-columns: 3fr 2fr; /* Reversed the order to place thumbnail in the second column */
+        grid-gap: 0px 80px;
+    }
+
+    .post-entry .entry-cover {
+        max-width: 100%; /* You can adjust the size as needed */
+        margin: auto;
+        grid-row: span 5;
+        grid-column: 2; /* Added to place it in the second column */
+    }
+}
+
+
+/* Style for entry-header and entry-content when entry-cover is not available */
+.post-entry:not(:has(.entry-cover)) .entry-header,
+.post-entry:not(:has(.entry-cover)) .entry-content {
+    grid-column: span 2; /* Make header and content span both columns */
+}
+
+.post-entry .entry-header {
+    align-self: center;
+}
+
+.post-entry .entry-content {
+    align-self: center;
+}
+
+.post-entry .entry-footer {
+    align-self: end;
+}
