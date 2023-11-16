@@ -1,0 +1,113 @@
+:root {
+  --primary-color: #3c3100; /* dark olive green */
+  --secondary-color: #fbf1c7; /* lemon green */
+  --alternative-color: #F3FAE1 /* magenta pink */
+  ;
+}
+
+
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark a {
+  color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.dark a {
+  text-decoration: none !important;
+}
+
+.dark .pagination a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: #6d6101;
+  }
+.dark a:hover {
+    color:  #feefac
+  }
+
+/* Light mode */
+header nav a {
+    color: var(--primary-color); /* Change this to your desired color */
+  }
+  
+  /* Dark mode */
+.dark header nav a {
+  color: var(--secondary-color);    /* Change this to your desired color */
+}
+  
+  
+.social-icons a {
+  color: var(--primary-color);
+}
+
+.dark .social-icons a {
+  color: var(--secondary-color);
+}
+.social-icons a:hover {
+  color: #6d6101;
+}
+
+.dark .social-icons a:hover {
+  color: #ffec9a
+}
+
+
+/* static/css/custom.css */
+
+/* Add border to code block */
+
+/* Add fade effect to the edges of images in .post-content */
+.post-content img {
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.post-content pre code {
+  display: block;
+  margin: auto 0;
+  padding: 20px;
+  color: var(--content);
+  background: var(--hljs-bg) !important;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  word-break: break-all;
+  border: 2px dashed var(--border);
+  overflow: auto;
+}
+
+.dark .post-content pre code {
+  display: block;
+  margin: auto 0;
+  padding: 20px;
+  color: var(--content);
+  background: var(--hljs-bg) !important;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  word-break: break-all;
+  border: 2px dashed var(--border);
+  overflow: auto;
+}
+
+/* Styling the horizontal scrollbar */
+.post-content pre code::-webkit-scrollbar {
+  height: 12px; /* Set the height of the scrollbar */
+}
+
+.post-content pre code::-webkit-scrollbar-thumb {
+  background-color: var(----hljs-bg); /* Set the color of the thumb (the draggable part) */
+  border-radius: 6px; /* Set the border radius of the thumb */
+}
+
