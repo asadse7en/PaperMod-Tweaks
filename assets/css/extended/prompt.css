@@ -1,0 +1,53 @@
+
+.logo {
+    position: relative;
+    font-family: Monaco, Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    font-size: 24px;
+    color: var(--content);
+    min-width: 360px;
+}
+
+
+.logo::after {
+    content: "";
+    position: relative;
+    top: 1px;   /* Adjust position */
+    right: -8px;   /* Adjust position */
+    display: inline-block;
+    background-color: var(--primary-color);
+    vertical-align: top;
+    width: 12px;  /* Set height to the line height of text */
+    height: 20px; /* Adjusted to match the line height */
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}
+
+
+.dark .logo::after {
+    background-color: var(--content);
+}
+
+@-webkit-keyframes blink {
+    0% {
+    opacity: 1.0;
+    }
+    50% {
+    opacity: 0.0;
+    }
+    100% {
+    opacity: 1.0;
+    }
+}
+
+@keyframes blink {
+    0% {
+    opacity: 1.0;
+    }
+    50% {
+    opacity: 0.0;
+    }
+    100% {
+    opacity: 1.0;
+    }
+}
