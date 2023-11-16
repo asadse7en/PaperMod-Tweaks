@@ -1,5 +1,5 @@
 # Papermod-Tweaks
-some tweaks to the papermod theme that i made for my (portfolio website)[https://iasad.me].
+some tweaks to the papermod theme that i made for my [portfolio website](https://iasad.me).
 
 ## Credits
 * I am using [Papermod](https://github.com/adityatelange/hugo-PaperMod) theme with some tweaks.
