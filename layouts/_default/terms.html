@@ -1,0 +1,36 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+{{- end }}
+
+
+<div class="tag-cloud-container">
+  {{- $type := .Type }}
+  {{- $tags := .Data.Terms.Alphabetical }}
+  {{- range $i, $tag := shuffle $tags }}
+    {{- with site.GetPage (printf "/%s/%s" $type $tag.Name) }}
+      {{- if gt $tag.Count 1 }}
+        {{- if le $tag.Count 8 }}
+          {{- $fontSize := add 1.5 (div (sub $tag.Count 1) 10.0) }}
+          <a href="{{ .Permalink }}" class="tag-cloud__item" style="font-size: {{ $fontSize }}em">{{ .Name }}</a>
+        {{- else }}
+          <a href="{{ .Permalink }}" class="tag-cloud__item" style="font-size: 3em">{{ .Name }}</a>
+        {{- end }}
+      {{- else }}
+        <a href="{{ .Permalink }}" class="tag-cloud__item">{{ .Name }}</a>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+</div>
+
+
+
+{{- end }}{{/* end main */ -}}
