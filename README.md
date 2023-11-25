@@ -14,7 +14,7 @@ I've made the following modifications to the theme. If you like any modification
 * Updated search page style `assets/css/extended/search.css`
 * Updated tags and categories page style to a tags cloud
     *  `assets/css/extended/tagscloud.css`
-    *  `assets/css/layouts/_default/terms.html`
+    *  `layouts/_default/terms.html`
 * Updated archive page style `assets/css/extended/archive.css`
 * Fixed thumbnail image size `assets/css/extended/thumbnail.css`
 * Added typeit integration `layouts/partials/home_info.html`
